@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+
+    <style>
+        body {
+            width: 600px;
+            margin: 30px auto 0px auto;
+            /*background-color: rgb(200, 200, 200);*/
+            background-image: url("https://images.unsplash.com/photo-1586076100131-32505c71d0d2?q=80&w=2734&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            background-position: center;
+            background-size: cover;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        section {
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: rgba(0, 0, 0, 0.124);
+
+            border-radius: 15%;
+
+            margin: 50px;
+            margin-bottom: 100px;
+            perspective: 150px;
+        }
+
+        .group {
+            clear: left;
+        }
+
+        .group>section>div {
+            width: 100px;
+            height: 90px;
+            color: white;
+            /*background-color: white;*/
+
+            border-radius: 15%;
+
+            padding-top: 10px;
+            text-align: center;
+            transition: 0.5s;
+
+            /*display: flex;
+            flex-direction: column;
+            justify-content: center;*/
+        }
+
+        .jesus {
+            background-image: url(html.png);
+            background-position: center;
+            background-size: cover;
+        }
+
+        /*.girl {
+            background-image: url(html3.png);
+            background-size: cover;
+            background-position: center;
+        }*/
+
+        .rotate1:hover {
+            transform: rotateX(70deg);
+        }
+
+        .rotate2:hover {
+            transform: rotateY(70deg);
+        }
+
+        .rotate3:hover {
+            transform: rotateZ(-70deg);
+        }
+
+        .move1:hover {
+            transform: translateX(-50px);
+        }
+
+        .move2:hover {
+            transform: translateY(-50px);
+        }
+
+        .move3:hover {
+            transform: translateZ(-50px);
+        }
+
+        .flip1 {
+            transform-origin: center;
+        }
+
+        .flip2 {
+            transform-origin: top;
+        }
+
+        .flip3 {
+            transform-origin: bottom;
+        }
+
+        .flip4 {
+            transform-origin: left;
+        }
+
+        .flip5 {
+            transform-origin: right;
+        }
+
+        .flipX:hover {
+            transform: rotateX(180deg);
+        }
+
+        .flipY:hover {
+            transform: rotateY(180deg);
+        }
+
+        .flipZ:hover {
+            transform: rotateZ(180deg);
+        }
+
+        .visible {
+            backface-visibility: visible;
+        }
+        .hidden {
+            backface-visibility: hidden;
+        }
+        .flip:hover{
+            transform: rotateX(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="group">
+        <section>
+            <div class="rotate1 jesus">X rotation</div>
+        </section>
+        <section>
+            <div class="rotate2 jesus">Y rotation</div>
+        </section>
+        <section>
+            <div class="rotate3 jesus">Z rotation</div>
+        </section>
+    </div>
+
+    <div class="group">
+        <section>
+            <div class="move1 jesus">X move</div>
+        </section>
+        <section>
+            <div class="move2 jesus">Y move</div>
+        </section>
+        <section>
+            <div class="move3 jesus">Z move</div>
+        </section>
+    </div>
+
+    <div class="group">
+        <section>
+            <div class="flipX flip1 jesus">X center</div>
+        </section>
+        <section>
+            <div class="flipX flip2 jesus">X top</div>
+        </section>
+        <section>
+            <div class="flipX flip3 jesus">X bottom</div>
+        </section>
+    </div>
+
+    <div class="group">
+        <section>
+            <div class="flipY flip1 jesus">Y center</div>
+        </section>
+        <section>
+            <div class="flipY flip4 jesus">Y left</div>
+        </section>
+        <section>
+            <div class="flipY flip5 jesus">Y right</div>
+        </section>
+    </div>
+
+    <div class="group">
+        <section>
+            <div class="flipZ flip1 jesus">Z center</div>
+        </section>
+        <section>
+            <div class="flipZ flip2 jesus">Z top</div>
+        </section>
+        <section>
+            <div class="flipZ flip3 jesus">Z bottom</div>
+        </section>
+    </div>
+
+    <div class="group">
+        <section>
+            <div class="flipZ flip4 jesus">Z left</div>
+        </section>
+        <section>
+            <div class="flipZ flip5 jesus">Z right</div>
+        </section>
+    </div>
+
+    <div class="group">
+        <section>
+            <div class="visible flip jesus">visible</div>
+        </section>
+        <section>
+            <div class="hidden flip jesus">hidden</div>
+        </section>
+    </div>
+</body>
+
+</html>
